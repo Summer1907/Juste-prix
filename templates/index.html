@@ -1,0 +1,21 @@
+<html lang="fr">
+<head>
+   <title>Le juste Prix</title>
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <h1>Bienvenue  au JUSTE PRIX</h1>
+  <h3>Vous aller devoir deviner le prix de cet object : </h3>
+  <h2>{{ price  }}</h2>
+  <form action='/invite' method='post'>
+      Réponse: <input type='text' name='invite'>
+      <input type='submit' value='Valider'>
+      <br>
+
+  </form>
+  <p class="answer">{{ answr }}</p>
+  <p2 class="tmp">{{ temps }}</p2>
+  <img src='{{ image }}' >
+  <h1 class="description">{{ description }}</h1>
+
+</body>
