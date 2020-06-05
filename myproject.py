@@ -34,7 +34,8 @@ def article():
     "Keyword": "TV",
     "SortBy": "",
     "Pagination": {
-      "ItemsPerPage": 1
+      "ItemsPerPage": 1,
+      "PageNumber": int(random.randrange(1,100))
     },
     "Filters": {
       "Price": {},
