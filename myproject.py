@@ -17,7 +17,7 @@ def index():
 def result():
  
  if  int(request.form['invite']) == session['number']:
-    answer = "Parfait"
+    answer = "Gagner ! "
     return render_template("index.html", answer=answer, )
  elif int(request.form['invite']) < session['number']:
       answer = "Plus"
