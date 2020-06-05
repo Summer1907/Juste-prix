@@ -6,16 +6,18 @@
 <body>
   <h1>Bienvenue  au JUSTE PRIX</h1>
   <h3>Vous aller devoir deviner le prix de cet object : </h3>
+  <h4 class="description">{{ description }}</h4>
+  <img src="image">
   <h2>{{ price  }}</h2>
   <form action='/invite' method='post'>
       Réponse: <input type='text' name='invite'>
       <input type='submit' value='Valider'>
       <br>
-
   </form>
-  <p class="answer">{{ answr }}</p>
-  <p2 class="tmp">{{ temps }}</p2>
-  <img src='{{ image }}' >
-  <h1 class="description">{{ description }}</h1>
+  <p2>C'est : {{ answer }}</p2>
+  <br>
+  <br>
+  
+  <p2 class="tmps">Vous avez mis :{{ temps }}</p2>
 
 </body>

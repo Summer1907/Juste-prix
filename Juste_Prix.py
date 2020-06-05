@@ -42,20 +42,10 @@ def article():
     }
   }
 }
- response = requests.post(url, data=json.dumps(params))
+ data = requests.post(url, data=json.dumps(params))
 
- price = response.json()['Products'][0]['BestOffer']['SalePrice']
- description = response.json()['Products'][0]['Name']
- image = response.json()['Products'][0]['MainImageUrl']
+ image = data.json()['Products'][0]['MainImageUrl']
+ price = data.json()['Products'][0]['BestOffer']['SalePrice']
+ description = data.json()['Products'][0]['Name']
 
  return render_template("index.html", price=price, description=description, image=image)
-
-
-
-
-
-
-
-
-
-app.run(debug=True)
