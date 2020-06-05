@@ -11,22 +11,20 @@ app.secret_key = 'LOL'
 @app.route('/',)
 def index():
  session['number'] = random.randrange(1,100)
- Rep = session['number']
- return render_template("index.html",Rep=Rep)
+ return render_template("index.html",)
 
 @app.route('/invite', methods=['POST'])
 def result():
- Rep = session['number']
-
+ 
  if  int(request.form['invite']) == session['number']:
     answer = "Parfait"
-    return render_template("index.html", answer=answer, Rep=Rep)
+    return render_template("index.html", answer=answer, )
  elif int(request.form['invite']) < session['number']:
       answer = "Plus"
-      return render_template("index.html", answer=answer, Rep=Rep)
+      return render_template("index.html", answer=answer,)
  else:
     answer = "Moins"
-    return render_template("index.html", answer=answer, Rep=Rep)
+    return render_template("index.html", answer=answer,)
 
 def article():
  url = "https://api.cdiscount.com/OpenApi/json/Search"
